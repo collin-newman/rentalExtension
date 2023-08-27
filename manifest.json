@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1",
+  "description": "A plain text description",
+  "icons": {
+    "128": "images/icon16.png",
+    "48": "images/icon48.png",
+    "38": "images/icon32.png",
+    "16": "images/icon16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
