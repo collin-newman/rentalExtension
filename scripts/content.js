@@ -1,6 +1,7 @@
-console.log("Loaded Rental Extension", window.re);
 let data = {};
+
 setTimeout(() => {
+  window.re.addRentInput();
   switch (window.location.hostname) {
     case "www.zillow.com":
       data = window.re.extractZillowData();

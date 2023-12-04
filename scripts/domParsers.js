@@ -57,13 +57,11 @@ window.re.extractZillowData = function () {
   const rentEstimateElement = elements.find((el) =>
     el.textContent.includes("Rent Zestimate")
   );
-  console.log(elements);
 
   let rent = null;
   if (rentEstimateElement) {
     const rentText =
       rentEstimateElement.parentElement?.nextElementSibling?.textContent;
-    console.log(rentEstimateElement, rentText);
     // parse int from '$1,885/mo'
     rent = parseInt(rentText.replace(/\D/g, ""));
   }
@@ -72,4 +70,8 @@ window.re.extractZillowData = function () {
     price,
     rent,
   };
+};
+
+window.re.getRentInput = function () {
+  return document.querySelector("#rentInput").value;
 };

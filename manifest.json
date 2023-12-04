@@ -15,6 +15,7 @@
       "js": [
         "scripts/domParsers.js",
         "scripts/evaluations.js",
+        "scripts/domElements.js",
         "scripts/content.js"
       ]
     }
